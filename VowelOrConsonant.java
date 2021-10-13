@@ -6,10 +6,14 @@ public class VowelOrConsonant
 	
 	public void checkVowelOrConsonant(char ch)
 	{
-		if(ch=='a'||ch=='A'||ch=='e'||ch=='E'||ch=='i'||ch=='I'||ch=='o'||ch=='O'||ch=='u'||ch=='U')
+		if(ch == 'a' || ch == 'A' || ch == 'e' || ch == 'E' || ch == 'i' || ch == 'I' || ch == 'o' || ch == 'O' || ch == 'u' || ch == 'U')
+		{
 			System.out.println("Vowel");
+		}
 		else
+		{
 			System.out.println("Consonant");
+		}
 	}
 	
 	public static void main(String[] at)
@@ -21,10 +25,14 @@ public class VowelOrConsonant
 		String str=(new Scanner(System.in)).next();
 		ch=str.charAt(0);
 		
-		if(str.length()>1||(ch>122&&ch<97)||(ch<65&&ch>90))
+		if(str.length() > 1 || (ch > 122 && ch < 97) || (ch < 65 && ch > 90))
+		{
 			System.out.println("Wrong Input");
+		}
 		else
+		{
 			obj.checkVowelOrConsonant(ch);
+		}
 		
 	}
 }
