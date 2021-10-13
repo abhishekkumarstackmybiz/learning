@@ -11,9 +11,10 @@ public class SameOrNot
 		
 		System.out.println("Enter First Floating Point Number:-");
 		BigDecimal number1=new BigDecimal(sc.next());
+		
 		System.out.println("Enter Second Floating Point Number:-");
 		BigDecimal number2=new BigDecimal(sc.next());
 		
-		System.out.println((number1.setScale(3,BigDecimal.ROUND_DOWN)).compareTo(number2.setScale(3,BigDecimal.ROUND_DOWN))==0?"Same":"Not Same");
+		System.out.println((number1.setScale(3 , BigDecimal.ROUND_DOWN)).compareTo(number2.setScale(3 , BigDecimal.ROUND_DOWN))==0 ? "Same" : "Not Same");
 	}
 }
