@@ -4,7 +4,7 @@ import java.util.Map;
 class InputOutputForHashMap {
     HashMap<String, String> hashMap = new HashMap<>();
 
-    InputOutputForHashMap(Map<String,String> mergeMap) {
+    InputOutputForHashMap(Map<String, String> mergeMap) {
         hashMap.putAll(mergeMap);
     }
 
@@ -23,7 +23,7 @@ class InputOutputForHashMap {
 
 public class AddElementToHashMap {
     public static void main(String[] args) {
-        Map<String,String> map=new HashMap<>();
+        Map<String, String> map = new HashMap<>();
         map.put("aa", "Ant");
         map.put("bb", "Bat");
         map.put("cc", "Cat");
