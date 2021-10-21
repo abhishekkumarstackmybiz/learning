@@ -5,7 +5,7 @@ class MyCalculator implements AdvancedArithmetic {
     int n;
 
     @Override
-    public int divisor_sum(int n) {
+    public int divisorSum(int n) {
         System.out.println("I implemented: AdvancedArithmetic");
         return IntStream.range(1, n + 1).filter(e -> n % e == 0).reduce(0, (n1, n2) -> n1 + n2);
     }

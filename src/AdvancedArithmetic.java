@@ -1,3 +1,3 @@
 public interface AdvancedArithmetic {
-    int divisor_sum(int n);
+    int divisorSum(int n);
 }

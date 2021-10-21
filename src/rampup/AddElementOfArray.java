@@ -3,17 +3,18 @@ package rampup;
 import java.util.Arrays;
 import java.util.Scanner;
 
-class InputOutputForArray{
+class InputOutputForArray {
     int[] arr;
 
     public int getArraySum() {
-        return Arrays.stream(arr).reduce(0,(number1,number2)->number1+number2);
+        return Arrays.stream(arr).reduce(0, (number1, number2) -> number1 + number2);
     }
 
     public void setArr(int[] arr) {
         this.arr = arr;
     }
 }
+
 public class AddElementOfArray {
     public static void main(String[] args) {
         int n;
