@@ -9,6 +9,6 @@ public class TestingInterface {
             return;
         }
         MyCalculator obj = new MyCalculator();
-        System.out.println(obj.divisor_sum(i));
+        System.out.println(obj.divisorSum(i));
     }
 }
