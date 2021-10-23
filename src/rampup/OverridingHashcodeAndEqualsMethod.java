@@ -19,15 +19,21 @@ class Test {
 
     @Override
     public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
         Test test = (Test) o;
-        return this.roll == test.roll && this.name.equals((test.name));
+
+        if (roll != test.roll) return false;
+        return name != null ? name.equals(test.name) : test.name == null;
     }
 
     @Override
     public int hashCode() {
-        return name.hashCode();
+        int result = roll;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        return result;
     }
-
 }
 
 public class OverridingHashcodeAndEqualsMethod {
