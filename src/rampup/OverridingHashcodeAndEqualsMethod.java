@@ -1,8 +1,6 @@
 package rampup;
 
-import java.util.Objects;
-
-class Test{
+class Test {
     int roll;
     String name;
 
@@ -12,8 +10,16 @@ class Test{
     }
 
     @Override
+    public String toString() {
+        return "Test{" +
+                "roll=" + roll +
+                ", name='" + name + '\'' +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
-        Test test=(Test)o;
+        Test test = (Test) o;
         return this.roll == test.roll && this.name.equals((test.name));
     }
 
@@ -22,16 +28,13 @@ class Test{
         return name.hashCode();
     }
 
-    @Override
-    public String toString() {
-        return roll+"@"+hashCode();
-    }
 }
+
 public class OverridingHashcodeAndEqualsMethod {
     public static void main(String[] args) {
-        Test test1=new Test(9,"abc");
-        Test test2=new Test(18,"def");
-        Test test3=new Test(27,"abc");
+        Test test1 = new Test(9, "abc");
+        Test test2 = new Test(18, "def");
+        Test test3 = new Test(9, "abc");
         System.out.println(test1);
         System.out.println(test2);
         System.out.println(test3);
