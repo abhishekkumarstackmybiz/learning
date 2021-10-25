@@ -10,14 +10,6 @@ class Test {
     }
 
     @Override
-    public String toString() {
-        return "Test{" +
-                "roll=" + roll +
-                ", name='" + name + '\'' +
-                '}';
-    }
-
-    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -33,6 +25,14 @@ class Test {
         int result = roll;
         result = 31 * result + (name != null ? name.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Test{" +
+                "roll=" + roll +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
 
