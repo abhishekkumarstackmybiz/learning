@@ -19,7 +19,7 @@ import java.util.Date;
 @AllArgsConstructor
 @ToString
 @Table(name = "employee")
-public class EmployeeDetails {
+public class EmployeeDetail {
     @Id
     @GeneratedValue
     private int id;
