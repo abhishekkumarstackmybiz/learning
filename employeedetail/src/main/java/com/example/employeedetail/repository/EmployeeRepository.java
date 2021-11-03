@@ -1,9 +1,9 @@
 package com.example.employeedetail.repository;
 
-import com.example.employeedetail.entity.EmployeeDetails;
+import com.example.employeedetail.entity.EmployeeDetail;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface EmployeeRepository extends CrudRepository<EmployeeDetails, Integer> {
+public interface EmployeeRepository extends CrudRepository<EmployeeDetail, Integer> {
 }

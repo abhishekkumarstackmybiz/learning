@@ -1,6 +1,6 @@
 package com.example.employeedetail.controller;
 
-import com.example.employeedetail.entity.EmployeeDetails;
+import com.example.employeedetail.entity.EmployeeDetail;
 import com.example.employeedetail.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -16,28 +16,28 @@ public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
 
-    @GetMapping("/getById/{id}")
-    public EmployeeDetails getEmployeeById(@PathVariable int id) {
+    @GetMapping("/employee/{id}")
+    public EmployeeDetail getEmployeeById(@PathVariable int id) {
         return employeeService.getEmployeeById(id);
     }
 
-    @DeleteMapping("/deleteById/{id}")
+    @DeleteMapping("/delete/{id}")
     public String deleteEmployeeById(@PathVariable int id) {
         return employeeService.deleteEmployeeById(id);
     }
 
-    @GetMapping("/allEmployee")
-    public Iterable<EmployeeDetails> getAllEmployeeDetails() {
+    @GetMapping("/employees")
+    public Iterable<EmployeeDetail> getAllEmployeeDetails() {
         return employeeService.getAllEmployee();
     }
 
-    @PostMapping("/saveEmployeeRecord")
-    public EmployeeDetails insertEmployeeDetails(@RequestBody EmployeeDetails employeeDetails) {
+    @PostMapping("/save")
+    public EmployeeDetail insertEmployeeDetails(@RequestBody EmployeeDetail employeeDetails) {
         return employeeService.insertEmployeeDetail(employeeDetails);
     }
 
-    @PutMapping("/updateEmployee")
-    public EmployeeDetails updateEmployeeDetail(@RequestBody EmployeeDetails employeeDetails) {
+    @PutMapping("/update")
+    public EmployeeDetail updateEmployeeDetail(@RequestBody EmployeeDetail employeeDetails) {
         return employeeService.updateEmployeeDetail(employeeDetails);
     }
 }
